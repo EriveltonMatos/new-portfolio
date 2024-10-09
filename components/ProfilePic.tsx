@@ -19,7 +19,7 @@ export default function ProfilePic() {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
         >
           <Image
             src={profilePic}
@@ -41,7 +41,7 @@ export default function ProfilePic() {
               cx="253"
               cy="253"
               r="250"
-              stroke="#00ff99"
+              stroke="#00ffff"
               strokeWidth="4"
               strokeLinecap="round"
               strokeLinejoin="round"

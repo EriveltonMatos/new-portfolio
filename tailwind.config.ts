@@ -41,7 +41,7 @@ const config: Config = {
       colors: {
 		primary: '#1c1c22',
 		accent: {
-			DEFAULT: '#00ff99',
+			DEFAULT: '#00ffff',
 			hover: '#00e187',
 		},
         background: 'var(--background)',
@@ -54,6 +54,7 @@ const config: Config = {
       },
     },
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 };
 
