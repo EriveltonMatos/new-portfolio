@@ -1,5 +1,5 @@
 "use client";
-import profilePic from "../app/public/assets/profile.png";
+import profile from "../app/public/assets/profile3.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export default function ProfilePic() {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
         >
           <Image
-            src={profilePic}
+            src={profile}
             priority
             quality={100}
             fill

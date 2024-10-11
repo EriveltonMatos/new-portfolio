@@ -14,9 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { Icon } from "@radix-ui/react-select";
-import { title } from "process";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const info = [
   {
