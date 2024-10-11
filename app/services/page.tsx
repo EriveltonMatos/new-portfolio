@@ -6,30 +6,30 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Desenvolvedor Web",
     description:
-      "I can help you build a website from scratch or improve your existing one.",
+      "Ofereço serviços de desenvolvimento web, criando sites e aplicações responsivas e funcionais.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "I can help you build a website from scratch or improve your existing one.",
+      "Tenho experiência com UI/UX Design utilizando o Figma como ferramente principal de prototipagem e design de interfaces.",
     href: "",
   },
   {
     num: "03",
     title: "Editor de Vídeos",
     description:
-      "I can help you build a website from scratch or improve your existing one.",
+      "Utilizo o DaVinci Resolve como editor principal e ofereço edição de vídeos para diversos formatos, como vídeos para youtube, tutoriais, etc.",
     href: "",
   },
   {
     num: "04",
-    title: "Web Development",
+    title: "Design Gráfico Personalizado",
     description:
-      "I can help you build a website from scratch or improve your existing one.",
+      "Design de logotipo, cartão de visita, midias sociais como posts para instagram, facebook, etc.",
     href: "",
   },
 ];
@@ -52,7 +52,7 @@ export default function Services() {
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-accent transition-all duration-500">
                     {service.num}
                   </div>
                   <Link
