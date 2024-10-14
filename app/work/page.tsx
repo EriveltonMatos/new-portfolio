@@ -1,5 +1,7 @@
 "use client";
-import website from "../public/assets/website.png";
+import website from "../public/assets/projeto1.png";
+import eritube from "../public/assets/eritube.png";
+import cafe from "../public/assets/cafe.png";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,37 +20,36 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Web Development",
+    category: "Dom Diego Barbearia",
     title: "Project 1",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Projeto freelancer para a barbearia Dom-Diego localizada na Av. Bezerra de Menezes em Fortaleza, Ceará. O projeto foi desenvolvido com as tecnologias mais recentes do mercado, como Next.js, Tailwind CSS, TypeScript e Framer Motion.",
     stack: [
-      { name: "Html 5" },
-      { name: "Css 3" },
+      { name: "Next.js" },
+      { name: "React" },
       { name: "TypeScript" },
-      { name: "Tailwind CSS" },
+      { name: "Tailwind" },
       { name: "Framer Motion" },
     ],
     image: website,
-    live: "",
+    live: "https://barbearia-dom-diego.vercel.app/",
     github: "",
   },
   {
     num: "02",
-    category: "Fullstack",
+    category: "EriTuBe Youtube Pessoal",
     title: "Project 2",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Meu youtube pessoal, criado utilizando a API do próprio youtube (Data V3), com o intuito de trazer minhas pesquisas e estudos mais rapidamente",
     stack: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "TypeScript" },
-      { name: "Shadcnui" },
-      { name: "Framer Motion" },
+      { name: "React.js" },
+      { name: "Tailwind" },
+      { name: "Javascript" },
+      { name: "MaterialUI" },
     ],
-    image: website,
-    live: "",
-    github: "",
+    image: eritube,
+    live: "https://eritube.vercel.app/",
+    github: "https://github.com/EriveltonMatos/eri-tube",
   },
   {
     num: "03",
@@ -63,7 +64,7 @@ const projects = [
       { name: "Shadcnui" },
       { name: "Framer Motion" },
     ],
-    image: website,
+    image: cafe,
     live: "",
     github: "",
   },
@@ -94,7 +95,7 @@ export default function Work() {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} projeto
+                {project.category}
               </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4 ">
@@ -149,7 +150,7 @@ export default function Work() {
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      <div className="relative w-full h-full">
+                      <div className="relative w-screen h-full">
                         <Image
                           src={project.image}
                           fill

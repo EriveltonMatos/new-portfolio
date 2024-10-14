@@ -1,5 +1,5 @@
 "use client";
-import profile from "../app/public/assets/profile3.png";
+import profile from "../app/public/assets/profile7.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -45,10 +45,10 @@ export default function ProfilePic() {
               strokeWidth="4"
               strokeLinecap="round"
               strokeLinejoin="round"
-              initial={{strokeDasharray: "24 10 0 0"}}
+              initial={{ strokeDasharray: "24 10 0 0" }}
               animate={{
                 strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-                rotate: [120, 360]
+                rotate: [120, 360],
               }}
               transition={{
                 duration: 20,
