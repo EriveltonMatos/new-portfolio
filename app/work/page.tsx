@@ -1,5 +1,5 @@
 "use client";
-import website from "../public/assets/projeto1.png";
+import website from "../public/assets/project3.png";
 import eritube from "../public/assets/eritube.png";
 import cafe from "../public/assets/cafe.png";
 import { motion } from "framer-motion";
@@ -53,20 +53,14 @@ const projects = [
   },
   {
     num: "03",
-    category: "FrontEnd",
-    title: "Project 2",
+    category: "Café sem Bug",
+    title: "Café sem Bug",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "TypeScript" },
-      { name: "Shadcnui" },
-      { name: "Framer Motion" },
-    ],
+      "Um dos primeiros projetos que criei utilizando html, css e javascript, apenas para estudo.",
+    stack: [{ name: "HTML5" }, { name: "CC3" }, { name: "Javascript" }],
     image: cafe,
-    live: "",
-    github: "",
+    live: "https://cafe-sem-bug.vercel.app/",
+    github: "https://github.com/EriveltonMatos/cafe-sem-bug",
   },
 ];
 

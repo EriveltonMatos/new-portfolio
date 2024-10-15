@@ -10,9 +10,17 @@ import {
   FaFigma,
   FaNodeJs,
   FaJava,
+  FaDocker,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiPostgresql,
+  SiSpring,
+} from "react-icons/si";
 
 //about data
 const about = {
@@ -74,11 +82,12 @@ const experience = {
       company: "Cartório Botelho",
       position: "Suporte de TI",
       duration: "2014 - 2022",
-      responsabilities: "Atuei em Suporte de TI por quase 8 anos, desenvolvendo soluções automatizadas com Python para otimizar processos. Fui responsável pela instalação e configuração de software e hardware, além de oferecer suporte técnico aos usuários, garantindo uma utilização eficaz das ferramentas disponíveis.",
+      responsabilities:
+        "Atuei em Suporte de TI por quase 8 anos, desenvolvendo soluções automatizadas com Python para otimizar processos. Fui responsável pela instalação e configuração de software e hardware, além de oferecer suporte técnico aos usuários, garantindo uma utilização eficaz das ferramentas disponíveis.",
       assignments: [
         "Desenvolvi scripts e ferramentas automatizadas em linguagens como Python utilizando PyAutoGUI e Selenium para otimizar tarefas repetitivas e resolver problemas recorrentes.",
         "Gerenciamento de Software e Hardware: Fornecia assistência técnica para à instalação, configuração e resolução de problemas relacionados ao software e hardware da empresa, capacitando os usuários a utilizarem as ferramentas de forma  eficaz. ",
-      ]
+      ],
     },
   ],
 };
@@ -88,18 +97,18 @@ const education = {
   Icon: "/assets/resume/cap.svg",
   title: "Educação",
   description:
-    "Atualmente, estou cursando uma Pós-Graduação em Engenharia de Software, DevOps e Cloud Computing na Unifametro. Além disso, sou Bacharel em Sistemas de Informação.",
+    "Bacharel em Sistemas de Informação e atualmente cursando pós-graduação em Engenharia de Software, DevOps e Cloud Computing na Unifametro.",
   items: [
     {
       institution: "Unifametro",
       course:
         "Pós-Graduação em Engenharia de Software, DevOps e Cloud Computing",
-      duration: "2024 - Present",
+      duration: "2023 - Present",
     },
     {
       institution: "Estácio",
       course: "Bacharelado em Sistemas de Informação",
-      duration: "2019 - 2023",
+      duration: "2017 - 2021",
     },
   ],
 };
@@ -108,8 +117,16 @@ const education = {
 const skills = {
   title: "Habilidades",
   description:
-    "Desenvolvedor Front-End, com experiência em desenvolvimento de sites e aplicações web. Atualmente, estou focado em desenvolvimento de aplicações web com ReactJS e NextJS. Além disso, tenho conhecimento em UI/UX Design, utilizando Figma para criação de protótipos e design de interfaces. Também tenho conhecimento em Back-End, utilizando NodeJS para criação de APIs RESTful.",
+    "Minhas hardskills são focadas na stack TypeScript/Java, com experiência em desenvolvimento front-end utilizando React e Next.js, e back-end com Spring Boot. Além disso, tenho conhecimento em ferramentas de versionamento como Git, CI/CD com GitLab CI/CD e Docker para a criação de ambientes consistentes. Tenho também experiência com bancos de dados relacionais como PostgreSQL e MySQL. Familiarizado com práticas de DevOps e metodologias ágeis (Scrum e Kanban), estou sempre buscando adotar boas práticas de código.",
   skillList: [
+    {
+      icon: <FaJava />,
+      name: "Java",
+    },
+    {
+      icon: <TbBrandTypescript />,
+      name: "Typescript",
+    },
     {
       icon: <FaHtml5 />,
       name: "HTML5",
@@ -121,6 +138,10 @@ const skills = {
     {
       icon: <FaJs />,
       name: "Javascript",
+    },
+    {
+      icon: <SiSpring />,
+      name: "Spring",
     },
     {
       icon: <FaReact />,
@@ -135,16 +156,20 @@ const skills = {
       name: "Next.js",
     },
     {
+      icon: <FaDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
       icon: <FaFigma />,
       name: "Figma",
     },
     {
       icon: <FaNodeJs />,
       name: "Node.JS",
-    },
-    {
-      icon: <FaJava />,
-      name: "Java",
     },
   ],
 };
@@ -189,7 +214,7 @@ export default function Resume() {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className=" text-white/60 mx-auto xl:mx-0">
+                <p className=" text-white/60 mx-auto xl:mx-0 text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -210,10 +235,17 @@ export default function Resume() {
                           </div>
 
                           <div className="flex items-center gap-3">
-                          <Image src={item.image} alt="logo" width={29} className="rounded-full"/>
-                          <p className="text-accent text-2xl">{item.company}</p>
+                            <Image
+                              src={item.image}
+                              alt="logo"
+                              width={29}
+                              className="rounded-full"
+                            />
+                            <p className="text-accent text-2xl">
+                              {item.company}
+                            </p>
                           </div>
-                          <div className="flex items-center lg:text-st gap-3">
+                          <div className="flex items-center lg:text-st gap-3 text-justify">
                             <p className="">{item.responsabilities}</p>
                           </div>
                           <div className="flex flex-col items-start gap-2">
@@ -226,16 +258,16 @@ export default function Resume() {
                                   {/* Bolinha azul */}
                                   <span className="w-[8px] h-[8px] rounded-full bg-accent flex-shrink-0 mt-3"></span>
                                   {/* Texto */}
-                                  <p className="">{assignment}</p>
+                                  <p className="text-justify">{assignment}</p>
                                 </div>
                               ))
                             ) : (
                               <div className="flex items-start gap-2">
                                 {/* Bolinha azul */}
                                 <span className="w-[8px] h-[8px] rounded-full bg-accent flex-shrink-0 mt-3"></span>
-                                  {/* Texto */}
-                                  <p className="">{item.assignments}</p>
-                                </div>
+                                {/* Texto */}
+                                <p className="">{item.assignments}</p>
+                              </div>
                             )}
                           </div>
                         </li>
@@ -282,7 +314,7 @@ export default function Resume() {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="text-white/60 mx-auto xl:mx-0 text-justify">
                     {skills.description}
                   </p>
                 </div>
@@ -316,7 +348,7 @@ export default function Resume() {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className=" text-white/60 mx-auto xl:mx-0 text-justify">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 mx-auto xl:mx-0">
